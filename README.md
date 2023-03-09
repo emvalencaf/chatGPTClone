@@ -16,8 +16,6 @@ A lógica aplicada foi desenvolver o projeto em layers.
 
 O frontend foi desenvolvido em TypeScript usando o ReactJS para componetizar os elementos e o NextJS para tentar ganhar performance com as páginas estáticas.
 
-O projeto 
-
 ### Como usar
 1. Baixe o repositório;
 2. Vá ao site da OpenAi e cadastre-se lá;

@@ -2,7 +2,21 @@
 
 ## Sobre
 
-O projeto foi desenvolvido em layers, a ideia foi desenvolver um servidor em JavaScript usando o NodeJS para consumir a API OpenAI.
+Nesse projeto foi desenvolvido backend e frontend para consumir a API da openai.
+
+### Desenvolvimento
+
+#### Backend
+
+O backend foi desenvolvido em JavaScript usando o NodeJS.
+
+A lógica aplicada foi desenvolver o projeto em layers.
+
+#### Frontend
+
+O frontend foi desenvolvido em TypeScript usando o ReactJS para componetizar os elementos e o NextJS para tentar ganhar performance com as páginas estáticas.
+
+O projeto 
 
 ### Como usar
 1. Baixe o repositório;

@@ -12,7 +12,10 @@ const app = express();
 app.use(express.json());
     //config FormData
 app.use(express.urlencoded({ extended: false }))
-app.use(cors());
+app.use(cors({
+    credentials: true,
+    origin: `${process.env.FRONTEND_URL}`
+}));
 
 // router
 const router = require("./routes");

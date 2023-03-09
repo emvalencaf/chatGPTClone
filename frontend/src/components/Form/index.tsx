@@ -15,7 +15,7 @@ export type FormProps = {
 	btnText?: string;
 	onSubmit?: <T>(
 		form?: MutableRefObject<HTMLFormElement>
-	) => Promise<T> | void;
+	) => Promise<T | void> | void;
 	asyncOnSubmit?: boolean;
 	reference?: HTMLFormElement;
 };

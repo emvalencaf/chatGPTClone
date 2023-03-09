@@ -7,7 +7,11 @@ require("dotenv").config();
 
 const app = express();
 
+// middleware
+    //config JSON
 app.use(express.json());
+    //config FormData
+app.use(express.urlencoded({ extended: false }))
 app.use(cors());
 
 // router

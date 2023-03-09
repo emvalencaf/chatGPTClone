@@ -2,9 +2,10 @@
 const serviceInput = require("../../service/prompt");
 module.exports = {
 	async sendText(req, res){
-
+		console.log(req.body);
+		const { prompt } = req.body;
 		try {
-            const { data } = await serviceInput.sendText(req.body.prompt);
+            const { data } = await serviceInput.sendText(prompt);
 
 			return res.status(200).json({
 				sucess: true,

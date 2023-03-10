@@ -7,11 +7,9 @@ type WrapperProps = {
 
 export const Wrapper = styled.div<WrapperProps>`
 	${({ user }) => css`
-		${user === "chatgpt" && `background-color:#444654;`}
+		${user === "gpt" && `background-color:#444654;`}
 		& ${ChatMessageContainer} {
-			justify-content: ${user === "chatgpt"
-				? `justify-content: left;`
-				: `justify-content: right;`};
+			justify-content: ${user == "gpt" ? "left" : "right"};
 		}
 	`}
 `;

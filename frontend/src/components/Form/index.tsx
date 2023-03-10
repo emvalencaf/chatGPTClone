@@ -76,12 +76,14 @@ const Form = ({
 					{<Close />}
 				</Styled.CloseButton>
 			</Styled.Alert>
-			<Button
-				disabled={loading}
-				icon={!!btnIcon && loading ? <Timer /> : btnIcon}
-			>
-				{loading ? "carregando..." : btnText}
-			</Button>
+			<Styled.ContainerButton>
+				<Button
+					disabled={loading}
+					icon={!!btnIcon && loading ? <Timer /> : btnIcon}
+				>
+					{loading ? "carregando..." : btnText}
+				</Button>
+			</Styled.ContainerButton>
 		</Styled.Form>
 	);
 };

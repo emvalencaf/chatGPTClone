@@ -1,17 +1,19 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
-	${() => css``}
+	${() => css`
+		width: 100%;
+	`}
 `;
 
 export const Input = styled.input`
 	${() => css`
 		background-color: #40414f;
-		width: 90%;
+		width: 100%;
 		padding: 12px;
 		color: white;
 		font-size: 1.5em;
-		border-radius: 5px;
+		border-radius: 5px 0px 0px 5px;
 		border: none;
 		border-color: none;
 		margin: 12px;

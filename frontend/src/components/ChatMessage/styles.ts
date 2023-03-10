@@ -21,6 +21,7 @@ export const ChatMessageContainer = styled.div`
 		display: flex;
 		align-items: center;
 		text-align: justify;
+		margin: ${theme.spacings.mediumSmall};
 		padding: ${theme.spacings.small} ${theme.spacings.medium};
 	`}
 `;

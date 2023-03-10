@@ -6,7 +6,6 @@ module.exports = {
 		const { prompt } = req.body;
 		try {
             const response = await serviceInput.sendText(prompt);
-			console.log(response.data.choices[0].index);
 			return res.status(200).json({
 				sucess: true,
 				data: response.data.choices[0].text

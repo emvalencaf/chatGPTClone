@@ -16,6 +16,9 @@ export const Wrapper = styled.div<WrapperProps>`
 
 export const ChatMessageContainer = styled.div`
 	${({ theme }) => css`
+		@media ${theme.media.lteOrEqSmall} {
+			padding: ${theme.spacings.tiny} ${theme.spacings.tiny};
+		}
 		display: flex;
 		align-items: center;
 		text-align: justify;

@@ -58,27 +58,31 @@ const Home = () => {
 		<Styled.Wrapper>
 			<SideMenu />
 			<ChatBox>
-				{!!chatLog &&
-					chatLog.map((message, index) => (
-						<ChatMessage
-							key={`${message.user}-${index}`}
-							message={message}
+				<Styled.ContainerLog>
+					{!!chatLog &&
+						chatLog.map((message, index) => (
+							<ChatMessage
+								key={`${message.user}-${index}`}
+								message={message}
+							/>
+						))}
+				</Styled.ContainerLog>
+				<Styled.ContainerForm>
+					<Form
+						btnText=""
+						btnIcon={<Send />}
+						onSubmit={handleSubmit}
+						reference={formRef.current}
+					>
+						<TextInput
+							as="textarea"
+							name="prompt"
+							value={prompt}
+							onInputChange={(v) => setPrompt(v)}
+							label={"escreva ou pergunte algo..."}
 						/>
-					))}
-				<Form
-					btnText=""
-					btnIcon={<Send />}
-					onSubmit={handleSubmit}
-					reference={formRef.current}
-				>
-					<TextInput
-						as="textarea"
-						name="prompt"
-						value={prompt}
-						onInputChange={(v) => setPrompt(v)}
-						label={"escreva ou pergunte algo..."}
-					/>
-				</Form>
+					</Form>
+				</Styled.ContainerForm>
 			</ChatBox>
 		</Styled.Wrapper>
 	);

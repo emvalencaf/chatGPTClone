@@ -3,6 +3,8 @@ import { Button } from "../Button/styles";
 
 export const Wrapper = styled.aside`
 	${({ theme }) => css`
+		display: flex;
+		justify-content: center;
 		width: ${theme.frameSizes.small};
 		padding: ${theme.spacings.small};
 		background-color: #202123;

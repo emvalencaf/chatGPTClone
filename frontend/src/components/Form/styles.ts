@@ -8,16 +8,13 @@ type AlertProps = {
 };
 
 export const Form = styled.form`
-	${({ theme }) => css`
-		position: absolute;
+	${() => css`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		bottom: 0;
-		left: 0;
-		right: 0;
 		width: 100%;
-		padding: ${theme.spacings.medium};
+		margin: 0px;
+		padding: 0px;
 		}
 	`}
 `;
@@ -41,7 +38,6 @@ export const Alert = styled.div<AlertProps>`
 		background-color: ${isSuccess
 			? theme.colors.success
 			: theme.colors.warning};
-		padding: ${theme.spacings.small};
 		border-radius: 0 0 0.4rem 0.4rem;
 		z-index: ${theme.layers.layer7};
 		transition: all ${theme.transitions.slow} ease-in-out;

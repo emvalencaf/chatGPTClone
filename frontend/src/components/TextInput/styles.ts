@@ -16,7 +16,6 @@ export const Input = styled.input`
 		border-radius: 5px 0px 0px 5px;
 		border: none;
 		border-color: none;
-		margin: 12px;
 		outline: none;
 		box-shadow: 0 0 8px 0 rgba(0, 0, 0.25);
 		resize: none;

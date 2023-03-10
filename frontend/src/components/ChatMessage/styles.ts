@@ -8,6 +8,11 @@ type WrapperProps = {
 export const Wrapper = styled.div<WrapperProps>`
 	${({ user }) => css`
 		${user === "chatgpt" && `background-color:#444654;`}
+		& ${ChatMessageContainer} {
+			justify-content: ${user === "chatgpt"
+				? `justify-content: left;`
+				: `justify-content: right;`};
+		}
 	`}
 `;
 
@@ -15,7 +20,6 @@ export const ChatMessageContainer = styled.div`
 	${({ theme }) => css`
 		display: flex;
 		align-items: center;
-		justify-content: center;
 		text-align: justify;
 		padding: ${theme.spacings.small} ${theme.spacings.medium};
 	`}

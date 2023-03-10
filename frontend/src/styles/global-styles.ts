@@ -10,6 +10,18 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 62.5%;
     scroll-behavior: smooth;
   }
+
+  *::-webkit-scrollbar {
+		width: ${({ theme }) => theme.spacings.xxsmall};
+		height: ${({ theme }) => theme.spacings.xxsmall};
+
+		background-color: ${({ theme }) => theme.colors.gray9};
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: ${({ theme }) => theme.colors.deepBlack};
+	}
+
   body {
     font-size: 1.6rem;
     font-family: ${({ theme }) => theme.fonts.family.default};

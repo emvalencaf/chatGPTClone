@@ -42,6 +42,7 @@ const TextInput = ({
 				type={type}
 				name={name}
 				disabled={disabled}
+                                value={value}
 				ref={inputRef}
 				onChange={handleChange}
 				as={as}

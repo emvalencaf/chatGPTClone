@@ -20,6 +20,7 @@ import OpenAiController from "../../api/controllers/openai";
 
 const Home = () => {
 	// states
+	const [promptDisabled, setPromptDisabled] = useState(false);
 	const [prompt, setPrompt] = useState("");
 	const [chatLog, setChatLog] = useState<Message[]>([
 		{
@@ -32,25 +33,27 @@ const Home = () => {
 
 	// handle submit
 	const handleSubmit = async (): Promise<void> => {
+		setChatLog((s) => [
+			...s,
+			{
+				user: "me",
+				message: `${prompt}`,
+			},
+		]);
+		setPrompt("");
+		setPromptDisabled(true);
 		const response = await OpenAiController.request(prompt);
 
 		const gptResponse = response.data
 			.split("\n")
 			.map((line, index) => <p key={index}>{line}</p>);
 
-		const newArr: Message[] = [
-			{
-				user: "me",
-				message: `${prompt}`,
-			},
-			{
-				user: "gpt",
-				message: gptResponse,
-			},
-		];
-
-		setChatLog((s) => [...s, ...newArr]);
-		setPrompt("");
+		const gptMessage: Message = {
+			user: "gpt",
+			message: gptResponse,
+		};
+		setPromptDisabled(false);
+		setChatLog((s) => [...s, gptMessage]);
 		return;
 	};
 
@@ -79,7 +82,12 @@ const Home = () => {
 							name="prompt"
 							value={prompt}
 							onInputChange={(v) => setPrompt(v)}
-							label={"escreva ou pergunte algo..."}
+							disabled={promptDisabled}
+							label={
+								promptDisabled
+									? "aguarde a resposta do chatgpt..."
+									: "escreva ou pergunte algo..."
+							}
 						/>
 					</Form>
 				</Styled.ContainerForm>

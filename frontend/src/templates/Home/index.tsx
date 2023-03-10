@@ -26,10 +26,6 @@ const Home = () => {
 			user: "gpt",
 			message: "Como posso te ajudar hoje?",
 		},
-		{
-			user: "me",
-			message: "Como posso te ajudar hoje?",
-		},
 	]);
 	// refs
 	const formRef = useRef(null);

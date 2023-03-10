@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import { Button } from '../Button/styles';
+import styled, { css } from "styled-components";
+import { Button } from "../Button/styles";
 
 export const Wrapper = styled.aside`
 	${({ theme }) => css`

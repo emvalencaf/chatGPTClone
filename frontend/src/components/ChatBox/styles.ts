@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.section`
-	${({ theme }) => css`
+	${() => css`
 		flex: 1;
 		background-color: #353541;
 		position: relative;
@@ -9,11 +9,9 @@ export const Wrapper = styled.section`
 	`}
 `;
 
-
 export const ChatLog = styled.section`
-	${({ theme }) => css`
+	${() => css`
 		text-align: left;
 		white-space: "pre-wrap";
 	`}
 `;
-

@@ -1,12 +1,12 @@
-import styled, { css, DefaultTheme } from 'styled-components';
+import styled, { css, DefaultTheme } from "styled-components";
 
 type WrapperProps = {
 	theme: DefaultTheme;
 	user: string;
-}
+};
 
 export const Wrapper = styled.div<WrapperProps>`
-	${({ theme, user }) => css`
+	${({ user }) => css`
 		${user === "chatgpt" && `background-color:#444654;`}
 	`}
 `;
@@ -22,7 +22,7 @@ export const ChatMessageContainer = styled.div`
 `;
 
 export const Message = styled.div`
-	${({ theme }) => css`
+	${() => css`
 		padding-left: 40px;
 		padding-right: 40px;
 	`}

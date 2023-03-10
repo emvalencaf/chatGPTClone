@@ -5,11 +5,11 @@ module.exports = {
 		console.log(req.body);
 		const { prompt } = req.body;
 		try {
-            const { data } = await serviceInput.sendText(prompt);
-
+            const response = await serviceInput.sendText(prompt);
+			console.log(response.data.choices[0].index);
 			return res.status(200).json({
 				sucess: true,
-				data: data.choices[0].text
+				data: response.data.choices[0].text
 			});
 
 		} catch (error) {

@@ -46,7 +46,6 @@ const TextInput = ({
 				ref={inputRef}
 				onChange={handleChange}
 				as={as}
-				defaultValue={value}
 				required={required}
 				placeholder={label}
 			/>

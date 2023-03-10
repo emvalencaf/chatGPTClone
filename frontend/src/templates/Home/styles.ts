@@ -6,10 +6,19 @@ import { Input } from "../../components/TextInput/styles";
 export const Wrapper = styled.div`
 	${({ theme }) => css`
 		@media ${theme.media.lteOrEqMedium} {
+			display: flex;
+			flex-direction: column;
 			& ${WrapperSideMenu} {
-				opacity: 0;
-				display: none;
-				visibility: hidden;
+				width: 100%;
+				padding: ${theme.spacings.small} ${theme.spacings.medium};
+				max-height: ${theme.spacings.huge};
+				& ${Button} {
+					border: none;
+					outline: none;
+					background-color: inherit;
+					padding: none;
+					max-height: ${theme.spacings.mediumLarge};
+				}
 			}
 		}
 		text-align: center;

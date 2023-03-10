@@ -28,7 +28,8 @@ export const ChatMessageContainer = styled.div`
 `;
 
 export const Message = styled.div`
-	${() => css`
+	${({ theme }) => css`
+		font-size: ${theme.fonts.sizes.small};
 		padding-left: 40px;
 		padding-right: 40px;
 	`}

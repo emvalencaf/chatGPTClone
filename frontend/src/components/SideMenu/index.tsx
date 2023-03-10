@@ -1,15 +1,10 @@
 // component
-import Button from '../Button';
+import Button from "../Button";
 
 // styles
-import * as Styled from './styles';
+import * as Styled from "./styles";
 
-// types
-export type SideMenuProps = {
-	title?: string;
-};
-
-const SideMenu = ({ title = '' }: SideMenuProps) => {
+const SideMenu = () => {
 	return (
 		<Styled.Wrapper>
 			<Button>Novo Chat</Button>

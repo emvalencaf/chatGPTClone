@@ -1,6 +1,6 @@
 // styles
-import { InputHTMLAttributes, useRef } from 'react';
-import * as Styled from './styles';
+import { InputHTMLAttributes, useRef } from "react";
+import * as Styled from "./styles";
 
 // types
 export type TextInputProps = {
@@ -25,7 +25,6 @@ const TextInput = ({
 	reference = null,
 	required = false,
 }: TextInputProps) => {
-
 	const inputRef = useRef(reference);
 
 	// synthetic event handler
